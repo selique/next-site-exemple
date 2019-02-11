@@ -1,0 +1,94 @@
+.main {
+  height: 92.5vh;
+
+  &__svg {
+    height: 100vh;
+    width: 100vw;
+
+
+    &--town {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+
+      &--build {
+        position: absolute;
+        bottom: 10vh;
+        left: 10%;
+        width: 100%;
+        max-height: 100vh;
+        max-width: 70%;
+      }
+    }
+  }
+
+  // &__svg {
+  //   .main__svg--town {
+  //     background-image: url('../img/town.svg');
+  //     background-repeat: no-repeat;
+  //     background-size: contain;
+  //     display: block;
+  //     height: 70%;
+  //     position: absolute;  
+  //     top: 14.95%;
+  //     left: 0;
+  //     right: 0;
+  //     margin: 0 auto;
+  //     width: 50%;
+  //   }
+  // }
+
+  &__cta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &--head {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.17;
+      letter-spacing: 0.01cm;
+      color: $blue;
+      position: relative;
+      top: 15.8vh;
+      margin: 0 auto;
+      width: fit-content;
+      //TODO
+      //verificar alinhamento com desginer (está desalinanhado o layout)
+      // left: 7px;
+    }
+
+    &--desc {
+      font-size: 18px;
+      line-height: 1.62;
+      letter-spacing: 0.017cm;
+      color: #282a43;
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      top: 18.7vh;
+      margin: 0 auto;
+      width: fit-content;
+      //TODO
+      //verificar alinhamento com desginer (está desalinanhado o layout)
+      // left: 7px;
+    }
+
+    &--btn {
+      @include button($base, $blueDarken);
+      min-width: 21vh;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      text-transform: uppercase;
+      top: 22.5vh;
+      border-radius: 6.5px;
+      box-shadow: 0 6px 10px 0 rgba(13, 151, 255, 0.14);
+      //TODO
+      //verificar alinhamento com desginer (está desalinanhado o layout)
+      // left: 15px;
+    }
+  }
+}

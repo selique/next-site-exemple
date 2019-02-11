@@ -1,0 +1,154 @@
+.footer {
+  height: fit-content;
+  background: $marineDarken;
+  padding-top: 44px;
+  font-weight: 300;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+  //background workaround
+  .row {
+    .container {
+      margin: 0 auto;
+    }
+  }
+
+  //background workaround
+  &--bg {
+    display: block;
+    content: " ";
+    position: absolute;
+    top: 92.4vh;
+    height: 380px;
+    background: $marineDarken;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  &__bloco {
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--logo {
+      &--img {
+        width: 42px;
+        height: 43px;
+        position: absolute;
+      }
+    }
+
+    &--texto {
+      &--title {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: $base;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+
+      &-ul {
+        &--item {
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+
+          >a {
+            font-size: 14px;
+            line-height: 2.43;
+            letter-spacing: 0px;
+            color: $grayLight;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  &__app {
+
+    &--title {
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      color: $base;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    &--link {
+      display: inline-block;
+
+      &__box {
+        border: solid 1px $gray;
+        border-radius: 6.5px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: $base;
+        width: 180px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px 10px 0px;
+
+        &--img {
+          width: 25%;
+          padding: 3% 6%;
+          vertical-align: middle;
+        }
+
+        &--text {
+          letter-spacing: 0.9px;
+          line-height: 18px;
+          width: 65%;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  &__social {
+
+    &--title {
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      color: $base;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+    }
+
+    &--link {
+      display: inline-block;
+
+      &__box {
+        border-radius: 6.5px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        color: $base;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &--img {
+          width: 40px;
+          height: 40px;
+          vertical-align: middle;
+          padding: 5% 10%;
+
+          svg {
+            path {
+              fill: red !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

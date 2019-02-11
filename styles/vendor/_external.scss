@@ -1,0 +1,47 @@
+//scroll
+
+html,
+body {
+  overflow-y: overlay;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $grayLighting;
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grayLight;
+
+  border-radius: 10px;
+
+  /* Handle on hover */
+  &:hover {
+    background: $grayLightIntermediary;
+    border-radius: 10px;
+  }
+}
+
+
+/* control jquery validation */
+label.error {
+  font-weight: 400;
+  color: $invertBlue;
+  margin: 0;
+  width: 100%;
+  float: right;
+  text-align: left;
+  position: absolute;
+  right: 0%;
+}
+
+input.error {
+  background-color: rgba($invertBlue, 0.3);
+}
