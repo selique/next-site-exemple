@@ -1,9 +1,34 @@
-# next.js-boilerplate
-a simple boilerplate for https://github.com/zeit/next.js
+# Constant.money website
 
-```
-npm i -g yarn
-git clone this shit
-cd into this shit in your machine
+## Development
+
+Environment required:
+
+- nodejs 10.+
+- yarn
+
+### Install dependencies
+
+```bash
 yarn
+```
+
+### Start
+
+```bash
+yarn dev
+```
+
+## Production
+
+```bash
+yarn build
+```
+
+## Deployment
+
+```bash
+yarn deploy
+# or
+now && now alias
 ```

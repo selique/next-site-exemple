@@ -1,42 +1,34 @@
 {
-  "name": "smartbank",
-  "version": "1.0.0",
-  "description": "portal smartbank institucional e internet banking",
-  "main": "index.js",
-  "author": "Moisés Lopes Ferreira | https://www.linkedin.com/in/selique/",
-  "license": "ISC",
-  "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "next": "^8.0.0",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
-  },
+  "name": "constant-website",
+  "version": "0.0.1",
+  "main": "pages/index.js",
+  "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "export": "next export",
+    "now-build": "next build && next export -o dist",
+    "deploy": "now -n constant-website && now alias && now rm constant-website --safe --yes"
   },
-  "browserslist": [
-    ">= 0.5%",
-    "chrome >= 42",
-    "and_chr >= 42",
-    "and_ff >= 38",
-    "android >= 4.4",
-    "edge >= 12",
-    "firefox >= 38",
-    "ie >= 11",
-    "ios_saf >= 9",
-    "safari >= 9",
-    "node 10"
-  ],
-  "devDependencies": {
-    "autoprefixer": "^9.4.7"
+  "dependencies": {
+    "@sindresorhus/class-names": "^0.1.0",
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.18.0",
+    "bootstrap-nojs": "^4.1.3",
+    "expose-loader": "^0.7.5",
+    "formik": "^1.3.1",
+    "json-loader": "^0.5.7",
+    "modernizr": "^3.6.0",
+    "modernizr-loader": "^1.0.1",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "prop-types": "^15.6.2",
+    "raw-loader": "^0.5.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-ga": "^2.5.3",
+    "react-spinners": "^0.4.7"
   }
 }
