@@ -1,10 +1,8 @@
 .sb-header {
   font-weight: 500;
   width: 100%;
-  padding-top: 6vh;
-  padding-bottom: 2vh;
+  margin-top: 5vh;
   position: fixed;
-  line-height: 35px;
   background-color: rgba(255, 255, 255, 0.95);
   z-index: 10;
   @include breakpoint-max("md") {
@@ -31,13 +29,8 @@
   }
   .sb-logo {
     svg {
-      @include breakpoint("md") {
-        height: 34px;
-      }
-
-      @include breakpoint-max("md") {
-        height: 50px;
-      }
+      height: 37px;
+      margin: 8px 4px;
     }
     float: left;
   }
@@ -57,20 +50,17 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      @include breakpoint-max("md") {
-        margin-top: 20px;
-        border: 1px solid #b6b6b6;
-        border-radius: 5px;
-        padding: 10px 20px 20px;
-      }
       li {
         a {
           position: relative;
+          font-weight: 300;
           color: #484848;
           display: block;
-          padding: 0 25px;
-          height: 35px;
+          padding: 10px;
           transition: 0.3s;
+          font-size: 15px;
+          margin: 10px 17px;
+          letter-spacing: 1px;
           &:hover {
             opacity: 0.5;
           }
@@ -97,9 +87,6 @@
               height: 1px;
               background-color: #484848;
               opacity: 0.3;
-            }
-            &.btn-sb {
-              padding: 0 20px;
             }
           }
           &:last-of-type a:after {
