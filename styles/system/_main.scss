@@ -1,6 +1,6 @@
 body {
-  font-family: "motiva-sans", sans-serif !important;
-  .main {
+  font-family: "Apercu Pro", sans-serif !important;
+  .layout-content {
     background-color: $white;
     min-height: 100vh;
     font-weight: 300;
@@ -9,20 +9,9 @@ body {
     a {
       text-decoration: none !important;
     }
+    main {
+      padding-top: 7vh;
+    }
   }
 }
 
-.text-success {
-  color: #2dce89;
-}
-
-.btn-constant {
-  border-radius: 4px;
-  background-color: red;
-  color: $white !important;
-  padding: 10px 35px;
-  img {
-    margin-right: 10px;
-    max-height: 15px;
-  }
-}

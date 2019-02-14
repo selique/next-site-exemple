@@ -1,0 +1,15 @@
+// System
+@import "~bootstrap-nojs/bootstrap.css";
+@import "system/variables";
+@import "system/fonts";
+@import "system/function";
+@import "system/mixin";
+@import "system/main";
+
+// Components
+@import "components/scroll";
+@import "components/buttons";
+
+//partials
+@import "partials/header";
+@import "partials/footer";

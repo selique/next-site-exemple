@@ -1,0 +1,26 @@
+$white: #ffffff;
+$grayLighting: #f6f7f8;
+$grayLight: #e8e6e6;
+$grayLightIntermediary: #979797;
+$gray: #7d7d7d;
+$grayDarken: #3f4045;
+$blue: #4dbff8;
+$blueDarken: #3d4cb7;
+$marine: #41508a;
+$marineDarken: #282a43;
+$invertBlue: #b06afb;
+
+$points: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+.container {
+  outline: red solid 1px;
+}
+
+.text-success {
+  color: #2dce89;
+}
