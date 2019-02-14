@@ -48,8 +48,11 @@ class Header extends React.Component {
                 dangerouslySetInnerHTML={{ __html: humburgerIcon }}
               />
 
-              <div className={cn("sb-menu", { show: showMenu })}>
-                <ul>
+              <nav className={cn("sb-menu", { show: showMenu })}>
+                <ul className="nav">
+                  <li>
+                    <a>Quem somos</a>
+                  </li>
                   <li>
                     {/* envia evento quando clica na area de recrutamento */}
                     <ReactGA.OutboundLink
@@ -62,12 +65,13 @@ class Header extends React.Component {
                     </ReactGA.OutboundLink>
                   </li>
                   <li>
-                    <Link href="convite">
-                      <a className="btn-sb">Peça seu Convite</a>
-                    </Link>
+                    <a>Ajuda</a>
+                  </li>
+                  <li className="sb-cta">
+                    <a className="sb-cta__btn">Peça seu convite</a>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </div>
           </div>
         </div>
