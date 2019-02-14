@@ -23,7 +23,7 @@ const listImages = [
   "/static/images/block5.webp"
 ];
 
-class ConstantLandingPage extends React.Component {
+class sbLandingPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -84,8 +84,8 @@ class ConstantLandingPage extends React.Component {
 
   //altera cor de fundo do menu quando passa na dobra da ultima sessão
   handleScroll = () => {
-    const block5div = document.getElementById("landing-page-constant-block-5");
-    const header = document.getElementById("landing-page-constant-header");
+    const block5div = document.getElementById("sb-block-5");
+    const header = document.getElementById("sb-header");
     const { offsetTop } = block5div;
     if (
       document.documentElement.scrollTop > offsetTop - 50 ||
@@ -102,7 +102,7 @@ class ConstantLandingPage extends React.Component {
 
   //dispara form de email
   handleSubmit = (values, setSubmitting) => {
-    const name = "constant";
+    const name = "sb";
     const { email: emailSub } = values;
     const formData = new FormData();
     formData.set("email", emailSub);
@@ -148,12 +148,12 @@ class ConstantLandingPage extends React.Component {
 
     return (
       <Layout>
-        <section className="landing-page-constant-block block-1">
+        <section className="sb-block block-1">
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5 project-detail">
-                <div className="landing-page-constant-heading">
-                  Constant
+                <div className="sb-heading">
+                  sb
                   <div className="slogan">
                     Untraceable, stable, digital cash.
                   </div>
@@ -196,10 +196,10 @@ class ConstantLandingPage extends React.Component {
                       /* and other goodies */
                     }) => (
                       <form onSubmit={handleSubmit}>
-                        <div className="landing-page-constant-subscribe">
+                        <div className="sb-subscribe">
                           <input
                             placeholder="Enter your email address"
-                            className="form-control landing-page-constant-subscribe-input has-error"
+                            className="form-control sb-subscribe-input has-error"
                             type="text"
                             name="email"
                             onChange={handleChange}
@@ -213,7 +213,7 @@ class ConstantLandingPage extends React.Component {
                           )}
                           <button
                             type="submit"
-                            className="btn-constant"
+                            className="btn-sb"
                             disabled={isSubmitting}
                           >
                             {!isSubmitting ? (
@@ -250,29 +250,27 @@ class ConstantLandingPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="landing-page-constant-block block-2">
+        <section className="sb-block block-2">
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
-                <div className="landing-page-constant-heading">
-                  Borderless. Stable
-                </div>
+                <div className="sb-heading">Borderless. Stable</div>
                 <p>
-                  Constant is a different kind of cryptocurrency. Like Bitcoin,
+                  sb is a different kind of cryptocurrency. Like Bitcoin,
                   it is completely decentralized; nobody owns or controls
-                  Constant. Unlike Bitcoin however, Constant is stable, so you
+                  sb. Unlike Bitcoin however, sb is stable, so you
                   can spend it on everyday things.{" "}
                 </p>
                 <p>
                   People continue to choose paper money for the benefits of
                   privacy, control and autonomy, but it nervously sits under
                   mattresses, and can only travel through multiple hands.
-                  Constant is cryptographically-secured, privacy-protected
+                  sb is cryptographically-secured, privacy-protected
                   digital paper money - that you can instantly send across
                   borders, not just streets.
                 </p>
                 <p>
-                  Constant gives you anonymity and control, and complete freedom
+                  sb gives you anonymity and control, and complete freedom
                   with your money.
                 </p>
               </div>
@@ -282,11 +280,11 @@ class ConstantLandingPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="landing-page-constant-block block-3">
+        <section className="sb-block block-3">
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
-                <div className="landing-page-constant-heading">
+                <div className="sb-heading">
                   Autonomous monetary policy
                 </div>
                 <p>
@@ -298,13 +296,13 @@ class ConstantLandingPage extends React.Component {
                   gamble that few dare take.
                 </p>
                 <p>
-                  The stability of Constant enables these use cases at scale.
+                  The stability of sb enables these use cases at scale.
                 </p>
                 <p>
                   Our AI scientists and economics researchers are working
                   together to develop an adaptive, self-learning,
                   self-adjusting, autonomous monetary policy that can weather
-                  all market conditions, keeping the value of Constant stable at
+                  all market conditions, keeping the value of sb stable at
                   all times.
                 </p>
               </div>
@@ -314,13 +312,11 @@ class ConstantLandingPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="landing-page-constant-block block-4">
+        <section className="sb-block block-4">
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
-                <div className="landing-page-constant-heading">
-                  Total privacy
-                </div>
+                <div className="sb-heading">Total privacy</div>
                 <p>
                   Your entire payment history is public on the blockchain.
                   Transparency is one of the blockchain’s strongest ideals, but
@@ -329,13 +325,13 @@ class ConstantLandingPage extends React.Component {
                   have, and what you spend it on.{" "}
                 </p>
                 <p>
-                  Constant provides a mechanism for legitimate exchange that
+                  sb provides a mechanism for legitimate exchange that
                   also safeguards your privacy.{" "}
                 </p>
                 <p>
-                  At the core of Constant is zero-knowledge cryptography. Your
+                  At the core of sb is zero-knowledge cryptography. Your
                   transaction information, including sender, receiver, and
-                  transaction value, is never exposed. Constant is untraceable.
+                  transaction value, is never exposed. sb is untraceable.
                 </p>
               </div>
               <div className="col-12 col-md-5 col-lg-6 col-xl-7 img-container">
@@ -352,23 +348,20 @@ class ConstantLandingPage extends React.Component {
           liveagent.init('https://d.la2-c1-ph2.salesforceliveagent.com/chat',
           '5721U000000QMOi', '00D1U000000yIYd');
         </script>
-        <section
-          className="landing-page-constant-block block-5"
-          id="landing-page-constant-block-5"
-        >
+        <section className="sb-block block-5" id="sb-block-5">
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
-                <div className="landing-page-constant-heading">
-                  Constant is digital money you can actually use.
+                <div className="sb-heading">
+                  sb is digital money you can actually use.
                 </div>
                 <p>
                   <ReactGA.OutboundLink
-                    eventLabel="constant.clicked.footer.telegram"
+                    eventLabel="sb.clicked.footer.telegram"
                     to="https://t.me/ninja_org"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-constant"
+                    className="btn-sb"
                   >
                     <img src="/static/images/telegram.svg" alt="" />
                     Connect with us on Telegram
@@ -386,4 +379,4 @@ class ConstantLandingPage extends React.Component {
   }
 }
 
-export default ConstantLandingPage;
+export default sbLandingPage;

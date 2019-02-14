@@ -1,23 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import ReactGA from 'react-ga';
+import React from "react";
+import Link from "next/link";
+import ReactGA from "react-ga";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 //invoca classNames condicionais
-import cn from '@sindresorhus/class-names';
+import cn from "@sindresorhus/class-names";
 
 //images
-import logoC from '../assets/logo-C.svg.raw';
-import humburgerIcon from '../assets/hamburger.svg.raw';
+import logoSb from "../assets/smartbank-logo.svg.raw";
+import humburgerIcon from "../assets/hamburger.svg.raw";
 
 class Header extends React.Component {
-
   //declara construtor states defaults
   constructor(props) {
     super(props);
 
     this.state = {
-      showMenu: false,
+      showMenu: false
     };
   }
 
@@ -25,47 +24,46 @@ class Header extends React.Component {
   toggleShowMenu = () => {
     const { showMenu } = this.state;
     this.setState({ showMenu: !showMenu });
-  }
+  };
 
   render() {
     //passa props dos states para variaveis
     const { showMenu } = this.state;
 
     return (
-      <header className="landing-page-constant-header" id="landing-page-constant-header">
+      <header className="sb-header" id="sb-header">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <div className="landing-page-constant-logo">
+              <div className="sb-logo">
                 <Link href="/">
-                  <a><div dangerouslySetInnerHTML={{ __html: logoC }} /></a>
+                  <a>
+                    <div dangerouslySetInnerHTML={{ __html: logoSb }} />
+                  </a>
                 </Link>
               </div>
-              <div onClick={this.toggleShowMenu} className="landing-page-constant-hamburger" dangerouslySetInnerHTML={{ __html: humburgerIcon }} />
+              <div
+                onClick={this.toggleShowMenu}
+                className="sb-hamburger"
+                dangerouslySetInnerHTML={{ __html: humburgerIcon }}
+              />
 
-              <div className={
-                cn(
-                  'landing-page-constant-menu',
-                  { show: showMenu },
-                )
-              }
-              >
+              <div className={cn("sb-menu", { show: showMenu })}>
                 <ul>
                   <li>
                     {/* envia evento quando clica na area de recrutamento */}
                     <ReactGA.OutboundLink
-                      eventLabel="constant.clicked.header.ninja-recruiting"
-                      to="https://ninja.org/recruiting?project=Constant"
+                      eventLabel="sb.clicked.header.ninja-recruiting"
+                      to="https://hivebr.workable.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-constant"
                     >
-                      Join the Constant team
-                      </ReactGA.OutboundLink>
+                      Carreiras
+                    </ReactGA.OutboundLink>
                   </li>
                   <li>
-                    <Link href="contato">
-                      <a>contato</a>
+                    <Link href="convite">
+                      <a className="btn-sb">Peça seu Convite</a>
                     </Link>
                   </li>
                 </ul>

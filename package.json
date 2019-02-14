@@ -22,6 +22,7 @@
     "modernizr": "^3.6.0",
     "modernizr-loader": "^1.0.1",
     "next": "^7.0.2",
+    "next-fonts": "^0.17.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prop-types": "^15.6.2",

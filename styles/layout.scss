@@ -1,0 +1,33 @@
+// System
+@import "~bootstrap-nojs/bootstrap.css";
+@import "system/variables";
+@import "system/fonts";
+@import "system/function";
+@import "system/mixin";
+
+body {
+  font-family: "Apercu Pro", sans-serif !important;
+  .layout-content {
+    background-color: $white;
+    min-height: 100vh;
+    font-weight: 300;
+    color: #484848;
+
+    a {
+      text-decoration: none !important;
+    }
+    main {
+      padding-top: 7vh;
+    }
+  }
+}
+
+.text-success {
+  color: #2dce89;
+}
+
+// Components
+@import "components/scroll";
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";

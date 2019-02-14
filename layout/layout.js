@@ -4,14 +4,14 @@ import Header from "../components/header";
 
 import Head from "next/head";
 
-import "../styles/styles.scss";
+import "../styles/layout.scss";
 
-const title = "Constant: untraceable, constant, digital cash.";
+const title = "sb: untraceable, sb, digital cash.";
 const description =
-  "Constant is a different kind of cryptocurrency. It is cryptographically-secured, privacy-protected digital paper money; cryptocurrency you can actually use. Be the first to get Constant when it launches.";
+  "sb is a different kind of cryptocurrency. It is cryptographically-secured, privacy-protected digital paper money; cryptocurrency you can actually use. Be the first to get sb when it launches.";
 
 export default ({ children }) => (
-  <div>
+  <div className="layout-content">
     <Head>
       <title>{title}</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -41,23 +41,21 @@ export default ({ children }) => (
       />
       <meta name="msapplication-TileColor" content="#0a2240" />
       <meta name="theme-color" content="#0a2240" />
-      <meta property="og:url" content="https://constant.money" />
+      <meta property="og:url" content="https://sb.money" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://constant.money/static/images/preview.png"
+        content="https://sb.money/static/images/preview.png"
       />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@ninjadotorg" />
       <meta name="twitter:creator" content="@ninjadotorg" />
       <link rel="stylesheet" href="https://use.typekit.net/bro5hwc.css" />
     </Head>
-    <main className="main">
-      <Header />
-      {children}
-    </main>
+    <Header />
+    <main>{children}</main>
     <Footer />
   </div>
 );
