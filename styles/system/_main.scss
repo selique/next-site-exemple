@@ -1,0 +1,17 @@
+body {
+  font-family: "Apercu Pro", sans-serif !important;
+  .layout-content {
+    background-color: $white;
+    min-height: 100vh;
+    font-weight: 300;
+    color: #484848;
+
+    a {
+      text-decoration: none !important;
+    }
+    main {
+      padding-top: 7vh;
+    }
+  }
+}
+
