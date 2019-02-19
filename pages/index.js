@@ -5,11 +5,11 @@ import Layout from "../layout/layout";
 
 import Subscribe from "../components/subscribe";
 
-import PropTypes from "prop-types";
 //invoca classNames condicionais
 import cn from "@sindresorhus/class-names";
 
 import ReactGA from "react-ga";
+
 import Modernizr from "modernizr";
 
 const listImages = [
@@ -25,21 +25,11 @@ class sbLandingPage extends React.Component {
     super(props);
 
     this.state = {
-      hasSubscribed: false,
       listImages
     };
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("resize", this.handleScroll);
-
-    this.handleScroll();
-
-    //inicializa evento google analytics
-    ReactGA.initialize("UA-128480092-1");
-    ReactGA.pageview(window.location.pathname + window.location.search);
-
     //da suporte a imagens .png caso o formato .webp falhe
     Modernizr.on("webp", result => {
       if (!result) {
@@ -55,47 +45,6 @@ class sbLandingPage extends React.Component {
       }
     });
   }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-    window.removeEventListener("resize", this.handleScroll);
-  }
-
-  //dispara evento enviando para o google analytics quando encontra o final da pargina
-  detectScrolledToBottom = () => {
-    const d = document.documentElement;
-    const offset = d.scrollTop + window.innerHeight;
-    const height = d.offsetHeight;
-
-    if (offset >= height - 50) {
-      console.log("At the bottom");
-    }
-
-    if (offset === height) {
-      ReactGA.event({
-        category: "scroll",
-        action: "scrolled to bottom"
-      });
-    }
-  };
-
-  //altera cor de fundo do menu quando passa na dobra da ultima sessão
-  handleScroll = () => {
-    const footer = document.getElementsByTagName("footer");
-    const header = document.getElementsByTagName("header");
-    const { offsetTop } = footer;
-    if (
-      document.documentElement.scrollTop > offsetTop - 50 ||
-      document.body.scrollTop > offsetTop - 50
-    ) {
-      if (!header.classList.contains("footer")) {
-        header.classList.add("footer");
-      }
-    } else {
-      header.classList.remove("footer");
-    }
-    this.detectScrolledToBottom();
-  };
 
   render() {
     const { listImages } = this.state;

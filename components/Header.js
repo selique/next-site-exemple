@@ -31,7 +31,7 @@ class Header extends React.Component {
     const { showMenu } = this.state;
 
     return (
-      <header className="sb-header" id="sb-header">
+      <header className="sb-header" id="begin-page">
         <div className="container">
           <div className="row">
             <div className="col-12">
