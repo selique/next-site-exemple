@@ -1,16 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-class Header extends React.Component {
-
+class Footer extends React.Component {
   render() {
-
-    return (
-      <footer>
-        footer simples
-      </footer>
-    );
+    return <footer>footer simples</footer>;
   }
 }
 
-export default Header;
+export default Footer;

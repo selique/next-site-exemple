@@ -1,117 +1,37 @@
-@import "../layout.scss";
-
-.constant-header {
-  font-weight: 500;
-  width: 100%;
-  padding-top: 7vh;
-  padding-bottom: 2vh;
-  position: fixed;
-  line-height: 35px;
-  background-color: rgba(255, 255, 255, 0.95);
-  z-index: 10;
-  @include breakpoint-max("md") {
-    padding: 20px 0;
-  }
+.home {
   @include breakpoint("md") {
-    &.block5 {
-      background-color: transparent !important;
-      color: $white;
-      a {
-        color: $white !important;
-      }
-      .constant-logo {
-        svg {
-          path {
-            fill: #fff;
-          }
-          circle {
-            fill: #fff;
-          }
-        }
-      }
-    }
+    min-height: 600px;
+    padding-top: 12vh;
+    height: 100vh;
   }
-  .constant-logo {
-    svg {
-      height: 60px;
-    }
-    float: left;
+  @include breakpoint-max("md") {
+    padding-top: 50px;
   }
-  .constant-menu {
-    user-select: none;
-    @include breakpoint("md") {
-      float: right;
+  &-heading {
+    &__slogan {
+      color: $blue !important;
+      font-weight: 500;
+      font-size: 3.2rem;
+      margin-top: 18px;
+      font-weight: 400;
+      text-align: center;
+      padding-left: 10px;
+      letter-spacing: -0.015cm;
+    }
+    &__desc {
+      color: $marineDarken;
+      font-size: 1.2rem;
+      margin-top: 50px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 0.025cm;
+      line-height: 35px;
     }
     @include breakpoint-max("md") {
-      margin-top: 60px;
-      display: none;
-      &.show {
-        display: block;
+      &-heading {
+        margin-top: 0;
+        margin-bottom: 30px;
       }
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      @include breakpoint-max("md") {
-        margin-top: 20px;
-        border: 1px solid #b6b6b6;
-        border-radius: 5px;
-        padding: 10px 20px 20px;
-      }
-      li {
-        a {
-          position: relative;
-          color: #484848;
-          display: block;
-          padding: 0 25px;
-          height: 35px;
-          transition: 0.3s;
-          &:hover {
-            opacity: 0.5;
-          }
-        }
-      }
-      @include breakpoint("md") {
-        li {
-          display: inline-block;
-        }
-      }
-      @include breakpoint-max("md") {
-        li {
-          display: block;
-          a {
-            padding: 0;
-            &:after {
-              content: "";
-              display: block;
-              position: absolute;
-              top: 100%;
-              left: 50%;
-              transform: translateX(-50%);
-              width: 100%;
-              height: 1px;
-              background-color: #484848;
-              opacity: 0.3;
-            }
-            &.btn-constant {
-              padding: 0 20px;
-            }
-          }
-          &:last-of-type a:after {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-  .constant-hamburger {
-    user-select: none;
-    float: right;
-    display: none;
-    cursor: pointer;
-    @include breakpoint-max("md") {
-      display: block;
     }
   }
 }
