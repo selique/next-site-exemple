@@ -15,8 +15,12 @@
       margin-top: 18px;
       font-weight: 400;
       text-align: center;
-      padding-left: 10px;
       letter-spacing: -0.015cm;
+      white-space: nowrap;
+      @include breakpoint-max("md") {
+        font-size: 200%;
+        margin-top: 30px;
+      }
     }
     &__desc {
       color: $marineDarken;
@@ -26,6 +30,11 @@
       text-align: center;
       letter-spacing: 0.025cm;
       line-height: 35px;
+      @include breakpoint-max("md") {
+        font-size: 95%;
+        line-height: 150%;
+        margin-top: 30px;
+      }
     }
     @include breakpoint-max("md") {
       &-heading {
