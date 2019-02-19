@@ -65,6 +65,13 @@
             opacity: 0.5;
           }
         }
+        &.sb-cta {
+          margin-left: 30px;
+          a {
+            @include btn-style;
+            margin: 12px 0px !important;
+          }
+        }
       }
       @include breakpoint("md") {
         li {
@@ -103,6 +110,7 @@
     cursor: pointer;
     @include breakpoint-max("md") {
       display: block;
+      margin: 10px;
     }
   }
 }

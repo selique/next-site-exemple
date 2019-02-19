@@ -1,0 +1,18 @@
+.sb {
+  &-subscribe {
+    position: relative;
+    &__input {
+      height: 50px;
+    }
+    &__btn {
+      position: absolute;
+      top: 0px;
+      right: 2px;
+      @include btn-style;
+    }
+  }
+}
+
+.text-success {
+  color: #2dce89;
+}

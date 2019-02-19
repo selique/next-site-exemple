@@ -9,9 +9,17 @@ body {
     a {
       text-decoration: none !important;
     }
+    img {
+      max-width: 100%;
+    }
     main {
       padding-top: 7vh;
+      section {
+        z-index: 1;
+        position: relative;
+        line-height: 24px;
+        font-size: 15px;
+      }
     }
   }
 }
-

@@ -3,17 +3,14 @@ import React from "react";
 //import tamplate head, header, footer
 import Layout from "../layout/layout";
 
+import Subscribe from "../components/subscribe";
+
 import PropTypes from "prop-types";
 //invoca classNames condicionais
 import cn from "@sindresorhus/class-names";
 
-import { Formik } from "formik";
-import axios from "axios";
 import ReactGA from "react-ga";
 import Modernizr from "modernizr";
-import Link from "next/link";
-
-import { MoonLoader } from "react-spinners";
 
 const listImages = [
   "/static/images/block1.webp",
@@ -84,160 +81,52 @@ class sbLandingPage extends React.Component {
 
   //altera cor de fundo do menu quando passa na dobra da ultima sessão
   handleScroll = () => {
-    const block5div = document.getElementById("sb-block-5");
-    const header = document.getElementById("sb-header");
-    const { offsetTop } = block5div;
+    const footer = document.getElementsByTagName("footer");
+    const header = document.getElementsByTagName("header");
+    const { offsetTop } = footer;
     if (
       document.documentElement.scrollTop > offsetTop - 50 ||
       document.body.scrollTop > offsetTop - 50
     ) {
-      if (!header.classList.contains("block5")) {
-        header.classList.add("block5");
+      if (!header.classList.contains("footer")) {
+        header.classList.add("footer");
       }
     } else {
-      header.classList.remove("block5");
+      header.classList.remove("footer");
     }
     this.detectScrolledToBottom();
   };
 
-  //dispara form de email
-  handleSubmit = (values, setSubmitting) => {
-    const name = "sb";
-    const { email: emailSub } = values;
-    const formData = new FormData();
-    formData.set("email", emailSub);
-    formData.set("product", name);
-
-    //dispara evento para o google anlytics quando form de email é enviado com sucesso
-    ReactGA.event({
-      category: "social",
-      action: "submit subscribe",
-      value: emailSub
-    });
-
-    axios({
-      method: "POST",
-      url: `https://ninja.org/api/user/subscribe`,
-      data: formData
-    })
-      .then(() => {
-        this.setState({ hasSubscribed: true }, () => {
-          setSubmitting(false);
-        });
-        //dispara evento para o google anlytics quando form de email é enviado com sucesso
-        ReactGA.event({
-          category: "social",
-          action: "submit subscribe success",
-          value: emailSub
-        });
-      })
-      .catch(err => {
-        console.log("err subscribe email", err);
-        setSubmitting(false);
-        //dispara evento para o google anlytics quando form de email é enviado com com erro
-        ReactGA.event({
-          category: "social",
-          action: "submit subscribe failed",
-          value: emailSub
-        });
-      });
-  };
-
   render() {
-    const { hasSubscribed, listImages } = this.state;
+    const { listImages } = this.state;
 
     return (
       <Layout>
-        <section className="sb-block block-1">
+        <section className="home">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-7 col-lg-6 col-xl-5 project-detail">
-                <div className="sb-heading">
-                  sb
-                  <div className="slogan">
-                    Untraceable, stable, digital cash.
+              <div className="col-12">
+                <div className="home-heading">
+                  <h1 className="home-heading__slogan">
+                    Nosso negócio é fazer <br />o seu crescer!
+                  </h1>
+                  <p className="home-heading__desc">
+                    Para todos os empreendedores que buscam uma experiência
+                    melhor
+                    <br />
+                    com serviços financeiros, o SmartBank oferece soluções
+                    transformadoras
+                    <br />
+                    e transparentes, em um modelo onde todos ganham.
+                    <br />
+                    <br />
+                    Peça seu convite e faça parte desta transformação.
+                  </p>
+                  <div className="sb-cta">
+                    <a className="sb-cta__btn">Peça seu convite</a>
                   </div>
                 </div>
-                <p style={{ marginTop: "38px", fontWeight: "bold" }}>
-                  Receive curated development and community updates.
-                </p>
-                {!hasSubscribed ? (
-                  <Formik
-                    initialValues={{ email: "" }}
-                    validate={values => {
-                      let errors = {};
-                      if (!values.email) {
-                        errors.email = "Required";
-                      } else if (
-                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                          values.email
-                        )
-                      ) {
-                        errors.email = "Invalid email address";
-                      }
-                      return errors;
-                    }}
-                    validateOnBlur={false}
-                    validateOnChange={false}
-                    onSubmit={(values, { setSubmitting }) => {
-                      setTimeout(() => {
-                        this.handleSubmit(values, setSubmitting);
-                      }, 400);
-                    }}
-                  >
-                    {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting
-                      /* and other goodies */
-                    }) => (
-                      <form onSubmit={handleSubmit}>
-                        <div className="sb-subscribe">
-                          <input
-                            placeholder="Enter your email address"
-                            className="form-control sb-subscribe-input has-error"
-                            type="text"
-                            name="email"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.email}
-                          />
-                          {errors.email && touched.email && (
-                            <span className="w-100 text-danger text-left">
-                              <span>{errors.email}</span>
-                            </span>
-                          )}
-                          <button
-                            type="submit"
-                            className="btn-sb"
-                            disabled={isSubmitting}
-                          >
-                            {!isSubmitting ? (
-                              "Submit"
-                            ) : (
-                              <MoonLoader
-                                sizeUnit={"px"}
-                                size={18}
-                                color={"#fff"}
-                                loading={true}
-                              />
-                            )}
-                          </button>
-                        </div>
-                      </form>
-                    )}
-                  </Formik>
-                ) : (
-                  <h5>
-                    <strong className="text-success">
-                      Thank you for subscribing!
-                    </strong>
-                  </h5>
-                )}
+                <Subscribe />
                 <div>
                   <span className="mouse">
                     <span className="mouse__wheel" />
@@ -256,22 +145,22 @@ class sbLandingPage extends React.Component {
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
                 <div className="sb-heading">Borderless. Stable</div>
                 <p>
-                  sb is a different kind of cryptocurrency. Like Bitcoin,
-                  it is completely decentralized; nobody owns or controls
-                  sb. Unlike Bitcoin however, sb is stable, so you
-                  can spend it on everyday things.{" "}
+                  sb is a different kind of cryptocurrency. Like Bitcoin, it is
+                  completely decentralized; nobody owns or controls sb. Unlike
+                  Bitcoin however, sb is stable, so you can spend it on everyday
+                  things.{" "}
                 </p>
                 <p>
                   People continue to choose paper money for the benefits of
                   privacy, control and autonomy, but it nervously sits under
-                  mattresses, and can only travel through multiple hands.
-                  sb is cryptographically-secured, privacy-protected
-                  digital paper money - that you can instantly send across
-                  borders, not just streets.
+                  mattresses, and can only travel through multiple hands. sb is
+                  cryptographically-secured, privacy-protected digital paper
+                  money - that you can instantly send across borders, not just
+                  streets.
                 </p>
                 <p>
-                  sb gives you anonymity and control, and complete freedom
-                  with your money.
+                  sb gives you anonymity and control, and complete freedom with
+                  your money.
                 </p>
               </div>
               <div className="col-12 col-md-5 col-lg-6 col-xl-7 img-container">
@@ -284,9 +173,7 @@ class sbLandingPage extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-7 col-lg-6 col-xl-5">
-                <div className="sb-heading">
-                  Autonomous monetary policy
-                </div>
+                <div className="sb-heading">Autonomous monetary policy</div>
                 <p>
                   Cryptocurrencies today are unuseable. You wouldn’t use
                   Bitcoin, or any coin, to buy a cup of coffee, or shop online.
@@ -295,15 +182,13 @@ class sbLandingPage extends React.Component {
                   services - offering a loan or taking a deposit in coin is a
                   gamble that few dare take.
                 </p>
-                <p>
-                  The stability of sb enables these use cases at scale.
-                </p>
+                <p>The stability of sb enables these use cases at scale.</p>
                 <p>
                   Our AI scientists and economics researchers are working
                   together to develop an adaptive, self-learning,
                   self-adjusting, autonomous monetary policy that can weather
-                  all market conditions, keeping the value of sb stable at
-                  all times.
+                  all market conditions, keeping the value of sb stable at all
+                  times.
                 </p>
               </div>
               <div className="col-12 col-md-5 col-lg-6 col-xl-7 img-container">
@@ -325,8 +210,8 @@ class sbLandingPage extends React.Component {
                   have, and what you spend it on.{" "}
                 </p>
                 <p>
-                  sb provides a mechanism for legitimate exchange that
-                  also safeguards your privacy.{" "}
+                  sb provides a mechanism for legitimate exchange that also
+                  safeguards your privacy.{" "}
                 </p>
                 <p>
                   At the core of sb is zero-knowledge cryptography. Your
@@ -340,14 +225,6 @@ class sbLandingPage extends React.Component {
             </div>
           </div>
         </section>
-        <script
-          type="text/javascript"
-          src="https://c.la2-c1-ph2.salesforceliveagent.com/content/g/js/45.0/deployment.js"
-        />
-        <script type="text/javascript">
-          liveagent.init('https://d.la2-c1-ph2.salesforceliveagent.com/chat',
-          '5721U000000QMOi', '00D1U000000yIYd');
-        </script>
         <section className="sb-block block-5" id="sb-block-5">
           <div className="container">
             <div className="row">

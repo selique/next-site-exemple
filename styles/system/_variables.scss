@@ -7,9 +7,8 @@ $grayDarken: #3f4045;
 $blue: #4dbff8;
 $blueDarken: #3d4cb7;
 $marine: #41508a;
-$marineDarken: #282a43;
+$marineDarken: #282a42;
 $invertBlue: #b06afb;
-
 $points: (
   xs: 576px,
   sm: 768px,
@@ -19,8 +18,4 @@ $points: (
 
 .container {
   outline: red solid 1px;
-}
-
-.text-success {
-  color: #2dce89;
 }

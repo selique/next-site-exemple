@@ -8,8 +8,11 @@
 
 // Components
 @import "components/scroll";
-@import "components/buttons";
+@import "components/subscribe";
 
 //partials
 @import "partials/header";
 @import "partials/footer";
+
+//pages
+@import "pages/home";
