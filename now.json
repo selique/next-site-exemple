@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "name": "constant-website",
+  "name": "smartbank-institucional",
   "builds": [
     {
       "src": "package.json",
-      "use": "@now/static-build"
+      "use": "@now/next"
     }
   ],
-  "alias": "constant.money"
+  "alias": "smartbank.institucional"
 }
+g
