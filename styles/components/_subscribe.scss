@@ -1,14 +1,21 @@
-.sb {
-  &-subscribe {
-    position: relative;
-    &__input {
-      height: 50px;
-    }
+.subscribe {
+  position: relative;
+  &__input {
+    height: 50px;
+  }
+  &__btn {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    @include btn-style;
+  }
+  &-cta {
+    margin: 89px;
     &__btn {
-      position: absolute;
-      top: 0px;
-      right: 2px;
-      @include btn-style;
+      @include btn-style();
+      padding: 15px 35px !important;
+      font-size: 18px !important;
+      letter-spacing: 0.025cm !important;
     }
   }
 }

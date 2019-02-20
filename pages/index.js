@@ -4,6 +4,7 @@ import React from "react";
 import Layout from "../layout/layout";
 
 import Subscribe from "../components/subscribe";
+import SubscribeCta from "../components/subscribe-cta";
 
 //invoca classNames condicionais
 import cn from "@sindresorhus/class-names";
@@ -11,7 +12,6 @@ import cn from "@sindresorhus/class-names";
 import ReactGA from "react-ga";
 
 import Modernizr from "modernizr";
-
 
 const listImages = [
   "/static/images/block1.webp",
@@ -57,10 +57,10 @@ class sbLandingPage extends React.Component {
             <div className="row">
               <div className="col-12">
                 <div className="home-heading">
-                  <h1 className="home-heading__slogan">
+                  <h1>
                     Nosso negócio é fazer <br />o seu crescer!
                   </h1>
-                  <p className="home-heading__desc">
+                  <p>
                     Para todos os empreendedores que buscam uma experiência
                     melhor
                     <br />
@@ -72,9 +72,7 @@ class sbLandingPage extends React.Component {
                     <br />
                     Peça seu convite e faça parte desta transformação.
                   </p>
-                  <div className="home-cta text-center">
-                    <a className="home-cta__btn">Peça seu convite</a>
-                  </div>
+                  <SubscribeCta />
                   <p className="home-slogan">
                     #1 plataforma bancária
                     <br />

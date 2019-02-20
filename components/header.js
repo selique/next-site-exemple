@@ -51,7 +51,9 @@ class Header extends React.Component {
               <nav className={cn("sb-menu", { show: showMenu })}>
                 <ul className="nav">
                   <li>
-                    <a>Quem somos</a>
+                    <Link href="/quem-somos">
+                      <a>Quem somos</a>
+                    </Link>
                   </li>
                   <li>
                     {/* envia evento quando clica na area de recrutamento */}

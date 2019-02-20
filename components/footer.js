@@ -13,48 +13,34 @@ class Footer extends React.Component {
               <div className="col-2">
                 <ul className="footer-box_links">
                   <li className="footer-box_links-bold">
-                    <Link>
-                      <a>Sobre nós</a>
-                    </Link>
+                    <a>Sobre nós</a>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
+                    <Link href="/quem-somos">
                       <a>Quem somos</a>
                     </Link>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
-                      <a>Políticas</a>
-                    </Link>
+                    <a>Políticas</a>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
-                      <a>Linkedin</a>
-                    </Link>
+                    <a>Linkedin</a>
                   </li>
                 </ul>
               </div>
               <div className="col-2">
                 <ul className="footer-box_links">
                   <li className="footer-box_links-bold">
-                    <Link>
-                      <a>Ajuda</a>
-                    </Link>
+                    <a>Ajuda</a>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
-                      <a>Central de Ajuda</a>
-                    </Link>
+                    <a>Central de Ajuda</a>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
-                      <a>Fale Conosco</a>
-                    </Link>
+                    <a>Fale Conosco</a>
                   </li>
                   <li className="footer-box_links">
-                    <Link>
-                      <a>Ouvidoria</a>
-                    </Link>
+                    <a>Ouvidoria</a>
                   </li>
                 </ul>
               </div>
@@ -67,15 +53,13 @@ class Footer extends React.Component {
               </div>
             </div>
             <div className="row rodape">
-              <p className="rodape-rights">@2019 Banco SmartBank S.A. Todos os direitos reservados</p>
+              <p className="rodape-rights">
+                @2019 Banco SmartBank S.A. Todos os direitos reservados
+              </p>
               <span className="rodape-termos">
-                <Link>
-                  <a>Termos de Uso</a>
-                </Link>
-                &nbsp;|&nbsp;                
-                <Link>
-                  <a>Segurança</a>
-                </Link>
+                <a>Termos de Uso</a>
+                &nbsp;|&nbsp;
+                <a>Segurança</a>
               </span>
             </div>
           </div>

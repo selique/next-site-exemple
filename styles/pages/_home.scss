@@ -13,48 +13,6 @@
         margin-bottom: 30px;
       }
     }
-    &__slogan {
-      color: $blue !important;
-      font-weight: 500;
-      font-size: 3.2rem;
-      margin-top: 25px;
-      left: 7px;
-      position: relative;
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: -0.015cm;
-      white-space: nowrap;
-      line-height: 58px;
-      @include breakpoint-max("md") {
-        font-size: 200%;
-        margin-top: 30px;
-        position: initial;
-      }
-    }
-    &__desc {
-      color: $marineDarken;
-      font-size: 1.2rem;
-      margin-top: 53px;
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: 0.025cm;
-      line-height: 35px;
-      @include breakpoint-max("md") {
-        font-size: 95%;
-        line-height: 150%;
-        margin-top: 30px;
-      }
-    }
-  }
-
-  &-cta {
-    margin: 89px;
-    &__btn {
-      @include btn-style();
-      padding: 15px 35px !important;
-      font-size: 18px !important;
-      letter-spacing: 0.025cm !important;
-    }
   }
   &-slogan {
     color: $marineDarken;
@@ -70,3 +28,5 @@
     }
   }
 }
+
+
