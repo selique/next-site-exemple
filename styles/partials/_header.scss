@@ -54,7 +54,7 @@
       will-change: transform;
       box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px inset;
       padding: 32px;
-      transition: transform 0.2s ease-out 0s;
+      transition: transform 0.3s ease-out 0s;
       width: 100vw;
       &.show {
         transform: translateX(0px);
@@ -95,13 +95,13 @@
           font-weight: 300;
           color: $marineDarken;
           display: block;
-          padding: 10px 15px 10px 10px;
+          padding: 20px !important;
           transition: 0.3s;
-          font-size: 15px;
+          font-size: 18px;
           margin: 8px 15px;
           letter-spacing: 1px;
           &:hover {
-            transition: all 600ms ease-in-out;
+            transition: all 300ms ease-in-out;
             background-color: $blue !important;
             color: $white;
           }
@@ -155,6 +155,54 @@
       margin: 10px;
       z-index: 11;
       position: relative;
+      cursor: pointer;
+
+      #nav-icon {
+        width: 40px;
+        height: 45px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: $blue;
+          border-radius: 4px;
+          opacity: 1;
+          left: 0;
+
+          transform: rotate(0deg);
+
+          transition: 0.6s ease-in-out;
+          &:nth-child(1) {
+            top: 0px;
+          }
+
+          &:nth-child(2) {
+            top: 10px;
+          }
+
+          &:nth-child(3) {
+            top: 20px;
+          }
+        }
+        &.open span:nth-child(1) {
+          top: 14px;
+          transform: rotate(135deg);
+        }
+
+        &.open span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+
+        &.open span:nth-child(3) {
+          top: 14px;
+          transform: rotate(-135deg);
+        }
+      }
     }
   }
 }

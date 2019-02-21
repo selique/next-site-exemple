@@ -8,7 +8,6 @@ import cn from "@sindresorhus/class-names";
 
 //images
 import logoSb from "../assets/smartbank-logo.svg.raw";
-import humburgerIcon from "../assets/hamburger.svg.raw";
 
 class Header extends React.Component {
   //declara construtor states defaults
@@ -42,11 +41,13 @@ class Header extends React.Component {
                   </a>
                 </Link>
               </div>
-              <div
-                onClick={this.toggleShowMenu}
-                className="sb-hamburger"
-                dangerouslySetInnerHTML={{ __html: humburgerIcon }}
-              />
+              <div onClick={this.toggleShowMenu} className="sb-hamburger">
+                <div id="nav-icon" className={cn({ open: showMenu })}>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
               <nav className={cn("sb-menu", { show: showMenu })}>
                 <ul className="nav">
                   <li>
