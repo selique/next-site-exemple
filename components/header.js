@@ -47,7 +47,6 @@ class Header extends React.Component {
                 className="sb-hamburger"
                 dangerouslySetInnerHTML={{ __html: humburgerIcon }}
               />
-
               <nav className={cn("sb-menu", { show: showMenu })}>
                 <ul className="nav">
                   <li>
