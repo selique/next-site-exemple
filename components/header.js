@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+import Link from "../components/active-link";
+
 import ReactGA from "react-ga";
 
 import PropTypes from "prop-types";
@@ -35,7 +36,7 @@ class Header extends React.Component {
           <div className="row">
             <div className="col-12">
               <div className="sb-logo">
-                <Link href="/">
+                <Link activeClassName="active" href="/">
                   <a>
                     <div dangerouslySetInnerHTML={{ __html: logoSb }} />
                   </a>
@@ -51,7 +52,7 @@ class Header extends React.Component {
               <nav className={cn("sb-menu", { show: showMenu })}>
                 <ul className="nav">
                   <li>
-                    <Link href="/quem-somos">
+                    <Link activeClassName="active" href="/quem-somos">
                       <a>Quem somos</a>
                     </Link>
                   </li>
