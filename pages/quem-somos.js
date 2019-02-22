@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../layout/layout";
 
 import SubscribeBanner from "../components/subscribe-banner";
-
+import background from "../assets/background-smartbank.svg.raw";
 import Modernizr from "modernizr";
 
 class QuemSomos extends React.Component {
@@ -18,7 +18,7 @@ class QuemSomos extends React.Component {
                 <h1>
                   #1 Plataforma Bancária
                   <br />
-                  100% Digita l do Brasil
+                  100% Digital do Brasil
                 </h1>
                 <p>
                   O SmartBank tem grande compromisso com a segurança e a
@@ -46,6 +46,7 @@ class QuemSomos extends React.Component {
             </div>
           </div>
         </section>
+        <div className="bg" dangerouslySetInnerHTML={{ __html: background }} />
         <SubscribeBanner />
       </Layout>
     );

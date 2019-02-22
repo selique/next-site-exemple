@@ -3,11 +3,12 @@
     color: $marineDarken;
     position: absolute;
     left: 79.1%;
-    top: 124.5%;
+
     font-size: 19px;
     letter-spacing: 0.035cm;
     font-weight: 400;
     text-align: right;
+    line-height: 28px !important;
     span {
       color: $blue;
     }

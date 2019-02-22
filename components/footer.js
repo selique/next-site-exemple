@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import background from "../assets/background-smartbank.svg.raw";
+
 import logoSb from "../assets/smartbank-logo.svg.raw";
 class Footer extends React.Component {
   render() {
     return (
       <footer className="footer" id="end-page">
-        <div className="bg" dangerouslySetInnerHTML={{ __html: background }} />
         <div className="footer-box">
           <div className="container">
             <div className="row">

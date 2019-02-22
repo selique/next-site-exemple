@@ -2,7 +2,7 @@ import React from "react";
 
 //import tamplate head, header, footer
 import Layout from "../layout/layout";
-
+import background from "../assets/background-smartbank.svg.raw";
 import Subscribe from "../components/subscribe";
 import SubscribeCta from "../components/subscribe-cta";
 
@@ -74,7 +74,7 @@ class sbLandingPage extends React.Component {
                 <p className="home-slogan">
                   #1 plataforma bancária
                   <br />
-                  <span>100% digital do Brasil</span>
+                  <span>&nbsp;&nbsp;100% digital do Brasil</span>
                 </p>
               </div>
               <div className="col-12 col-md-5 col-lg-6 col-xl-7 img-container">
@@ -83,6 +83,7 @@ class sbLandingPage extends React.Component {
             </div>
           </div>
         </section>
+        <div className="bg" dangerouslySetInnerHTML={{ __html: background }} />
       </Layout>
     );
   }
