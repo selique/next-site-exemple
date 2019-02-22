@@ -1,19 +1,4 @@
 .home {
-  @include breakpoint("md") {
-    min-height: 600px;
-    padding-top: 12vh;
-  }
-  @include breakpoint-max("md") {
-    padding-top: 50px;
-  }
-  &-heading {
-    @include breakpoint-max("md") {
-      &-heading {
-        margin-top: 0;
-        margin-bottom: 30px;
-      }
-    }
-  }
   &-slogan {
     color: $marineDarken;
     position: absolute;
@@ -28,5 +13,3 @@
     }
   }
 }
-
-

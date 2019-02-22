@@ -56,29 +56,26 @@ class sbLandingPage extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <div className="home-heading">
-                  <h1>
-                    Nosso negócio é fazer <br />o seu crescer!
-                  </h1>
-                  <p>
-                    Para todos os empreendedores que buscam uma experiência
-                    melhor
-                    <br />
-                    com serviços financeiros, o SmartBank oferece soluções
-                    transformadoras
-                    <br />
-                    e transparentes, em um modelo onde todos ganham.
-                    <br />
-                    <br />
-                    Peça seu convite e faça parte desta transformação.
-                  </p>
-                  <SubscribeCta />
-                  <p className="home-slogan">
-                    #1 plataforma bancária
-                    <br />
-                    <span>100% digital do Brasil</span>
-                  </p>
-                </div>
+                <h1>
+                  Nosso negócio é fazer <br />o seu crescer!
+                </h1>
+                <p>
+                  Para todos os empreendedores que buscam uma experiência melhor
+                  <br />
+                  com serviços financeiros, o SmartBank oferece soluções
+                  transformadoras
+                  <br />
+                  e transparentes, em um modelo onde todos ganham.
+                  <br />
+                  <br />
+                  Peça seu convite e faça parte desta transformação.
+                </p>
+                <SubscribeCta />
+                <p className="home-slogan">
+                  #1 plataforma bancária
+                  <br />
+                  <span>100% digital do Brasil</span>
+                </p>
               </div>
               <div className="col-12 col-md-5 col-lg-6 col-xl-7 img-container">
                 <img src={listImages[0]} alt="" />

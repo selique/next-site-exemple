@@ -19,7 +19,13 @@ body {
         position: relative;
         line-height: 24px;
         font-size: 15px;
-
+        @include breakpoint("md") {
+          min-height: 600px;
+          padding-top: 12vh;
+        }
+        @include breakpoint-max("md") {
+          padding-top: 50px;
+        }
         h1 {
           color: $blue !important;
           font-weight: 500;
