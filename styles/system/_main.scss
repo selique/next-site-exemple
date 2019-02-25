@@ -2,9 +2,10 @@ body {
   font-family: "Apercu Pro", sans-serif !important;
   .layout-content {
     background-color: $white;
-    min-height: 100vh;
+    min-height: 80vh;
     font-weight: 300;
-    color: #484848;
+    color: $grayDarken;
+    letter-spacing: 0.025cm;
 
     a {
       text-decoration: none !important;
@@ -14,11 +15,62 @@ body {
     }
     main {
       padding-top: 7vh;
+      .bg > svg {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 250px;
+      }
       section {
         z-index: 1;
         position: relative;
         line-height: 24px;
         font-size: 15px;
+
+        @include breakpoint("md") {
+          &:first-child {
+            min-height: 600px;
+            padding-top: 12vh;
+            margin-bottom: 90px;
+          }
+        }
+        @include breakpoint-max("md") {
+          padding-top: 50px;
+        }
+        h1 {
+          color: $blue !important;
+          font-weight: 500;
+          font-size: 3.2rem;
+          margin-top: 25px;
+          left: 7px;
+          position: relative;
+          font-weight: 400;
+          text-align: center;
+          letter-spacing: -0.015cm;
+          white-space: nowrap;
+          line-height: 58px;
+          @include breakpoint-max("md") {
+            font-size: 200%;
+            margin-top: 30px;
+            position: initial;
+          }
+        }
+        p {
+          color: $marineDarken;
+          font-size: 1.2rem;
+          margin-top: 53px;
+          font-weight: 400;
+          text-align: center;
+          letter-spacing: 0.025cm;
+          line-height: 35px;
+          @include breakpoint-max("md") {
+            font-size: 95%;
+            line-height: 150%;
+            margin-top: 30px;
+          }
+        }
       }
     }
   }

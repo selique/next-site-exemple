@@ -1,14 +1,41 @@
-.sb {
-  &-subscribe {
-    position: relative;
-    &__input {
-      height: 50px;
-    }
+//subscribe components
+.subscribe {
+  position: relative;
+  &__input {
+    height: 50px;
+  }
+  &__btn {
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    @include btn-style;
+  }
+  &-cta {
+    margin: 90px 0 0 0;
+
     &__btn {
-      position: absolute;
-      top: 0px;
-      right: 2px;
-      @include btn-style;
+      @include btn-style();
+      padding: 15px 35px !important;
+      font-size: 18px !important;
+      letter-spacing: 0.025cm !important;
+    }
+    &_banner {
+      background: $blue;
+      min-height: 365px;
+      padding-top: 12vh;
+      &__h2 {
+        color: $white;
+        letter-spacing: 0.025cm;
+      }
+      &__btn {
+        @include btn-style();
+        background: $marineDarken !important;
+        padding: 15px 35px !important;
+        font-size: 18px !important;
+        letter-spacing: 0.025cm !important;
+        position: relative;
+        top: 50px;
+      }
     }
   }
 }

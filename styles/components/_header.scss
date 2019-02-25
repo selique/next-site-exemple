@@ -1,0 +1,208 @@
+.sb-header {
+  font-weight: 500;
+  width: 100%;
+  padding: 3.7vh 0;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 10;
+  @include breakpoint("md") {
+    &.block5 {
+      background-color: transparent !important;
+      color: $white;
+      a {
+        color: $white !important;
+      }
+      .sb-logo {
+        svg {
+          path {
+            fill: #fff;
+          }
+          circle {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  .sb-logo {
+    svg {
+      height: 33px;
+      margin: 8px 7px;
+    }
+    float: left;
+  }
+  .sb-menu {
+    user-select: none;
+    @include breakpoint("md") {
+      float: right;
+    }
+    @include breakpoint-max("md") {
+      margin-top: 0px;
+      display: none;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      overflow-x: auto;
+      background-color: $marineDarken;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100vw);
+      will-change: transform;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px inset;
+      padding: 32px;
+      transition: transform 0.3s ease-out 0s;
+      width: 100vw;
+      &.show {
+        transform: translateX(0px);
+        z-index: 10;
+        ul {
+          li {
+            width: 100%;
+            margin: 10px 20px;
+            &.sb-cta {
+              margin: 10px 20px;
+            }
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+      ul {
+        li {
+          width: 100%;
+          margin: 10px 20px;
+          &.sb-cta {
+            margin: 10px 20px;
+          }
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          position: relative;
+          font-weight: 300;
+          color: $marineDarken;
+          display: block;
+          padding: 20px !important;
+          transition: 0.3s;
+          font-size: 15px;
+          margin: 0px 6px;
+          letter-spacing: 1px;
+          &:hover {
+            transition: all 300ms ease-in-out;
+            background-color: $blue !important;
+            color: $white;
+          }
+        }
+        &.sb-cta {
+          margin-left: 40px;
+          a {
+            @include btn-style;
+            margin: 10px -6px !important;
+          }
+        }
+      }
+      @include breakpoint("md") {
+        li {
+          display: inline-block;
+        }
+      }
+      @include breakpoint-max("md") {
+        li {
+          display: block;
+          a {
+            padding: 0;
+            &:after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 100%;
+              height: 1px;
+              background-color: $marineDarken;
+              opacity: 0.3;
+              text-decoration: none;
+            }
+          }
+          &:last-of-type a:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .sb-hamburger {
+    user-select: none;
+    float: right;
+    display: none;
+    cursor: pointer;
+    @include breakpoint-max("md") {
+      display: block;
+      margin: 10px;
+      z-index: 11;
+      position: relative;
+      cursor: pointer;
+
+      #nav-icon {
+        width: 40px;
+        height: 45px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background: $blue;
+          border-radius: 4px;
+          opacity: 1;
+          left: 0;
+
+          transform: rotate(0deg);
+
+          transition: 0.6s ease-in-out;
+          &:nth-child(1) {
+            top: 0px;
+          }
+
+          &:nth-child(2) {
+            top: 10px;
+          }
+
+          &:nth-child(3) {
+            top: 20px;
+          }
+        }
+        &.open span:nth-child(1) {
+          top: 14px;
+          transform: rotate(135deg);
+        }
+
+        &.open span:nth-child(2) {
+          opacity: 0;
+          left: -60px;
+        }
+
+        &.open span:nth-child(3) {
+          top: 14px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}

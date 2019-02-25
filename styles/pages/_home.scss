@@ -1,37 +1,16 @@
 .home {
-  @include breakpoint("md") {
-    min-height: 600px;
-    padding-top: 12vh;
-    height: 100vh;
-  }
-  @include breakpoint-max("md") {
-    padding-top: 50px;
-  }
-  &-heading {
-    &__slogan {
-      color: $blue !important;
-      font-weight: 500;
-      font-size: 3.2rem;
-      margin-top: 18px;
-      font-weight: 400;
-      text-align: center;
-      padding-left: 10px;
-      letter-spacing: -0.015cm;
-    }
-    &__desc {
-      color: $marineDarken;
-      font-size: 1.2rem;
-      margin-top: 50px;
-      font-weight: 400;
-      text-align: center;
-      letter-spacing: 0.025cm;
-      line-height: 35px;
-    }
-    @include breakpoint-max("md") {
-      &-heading {
-        margin-top: 0;
-        margin-bottom: 30px;
-      }
+  &-slogan {
+    color: $marineDarken;
+    position: absolute;
+    left: 79.1%;
+
+    font-size: 19px;
+    letter-spacing: 0.035cm;
+    font-weight: 400;
+    text-align: right;
+    line-height: 28px !important;
+    span {
+      color: $blue;
     }
   }
 }
