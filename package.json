@@ -12,11 +12,6 @@
     "deploy": "now -n constant-website && now alias && now rm constant-website --safe --yes"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-ga": "^2.5.3",
-    "react-spinners": "^0.4.7",
     "@sindresorhus/class-names": "^0.1.0",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
@@ -26,10 +21,16 @@
     "json-loader": "^0.5.7",
     "modernizr": "^3.6.0",
     "modernizr-loader": "^1.0.1",
+    "next": "latest",
     "next-fonts": "^0.17.0",
     "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prop-types": "^15.6.2",
     "raw-loader": "^0.5.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.1"
+    "react": "^16.7.0",
+    "react-collapsible": "^2.6.0",
+    "react-dom": "^16.7.0",
+    "react-ga": "^2.5.3",
+    "react-spinners": "^0.4.7"
   }
 }

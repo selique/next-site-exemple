@@ -28,12 +28,12 @@ body {
         position: relative;
         line-height: 24px;
         font-size: 15px;
-        margin-bottom: 90px;
 
         @include breakpoint("md") {
           &:first-child {
             min-height: 600px;
             padding-top: 12vh;
+            margin-bottom: 90px;
           }
         }
         @include breakpoint-max("md") {
