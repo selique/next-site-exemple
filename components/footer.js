@@ -20,7 +20,9 @@ class Footer extends React.Component {
                     </Link>
                   </li>
                   <li className="footer-box_links">
-                    <a>Políticas</a>
+                    <Link href="/politicas">
+                      <a>Políticas</a>
+                    </Link>
                   </li>
                   <li className="footer-box_links">
                     <a>Linkedin</a>
